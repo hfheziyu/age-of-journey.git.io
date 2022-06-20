@@ -3,6 +3,7 @@
 body{
     font-family: "Montserrat";
     font-size: 100%;
+    margin: 0;
 }
 h2 {
     font-size: 30px;
@@ -58,22 +59,87 @@ nav ul li a:focus, a:hover, nav ul li a:active{
     color: #4C6C2D;
     cursor: pointer;
 }
-/* header style */
 
-/* nav style */
-nav ul {
-    margin: 0.5em;
-    padding: 0;
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
+footer a {
+    color: antiquewhite;
 }
 
-nav ul li {
+footer a:hover {
+    color: beige;
+}
+/* header style */
+.nav-wrap {
+    padding: 0;
+    width: 100%;
+    max-height: 100%;
+    margin: 0;
+    background: #fff;
+    border-bottom: 1px solid #EDEDED;
+    position: relative;
+    min-height: 70px;
+    box-shadow: 0 3px 5px rgb(0 0 0 / 10%);
+}
+
+.search-bar-container {
+    width: 15%;
+    height: 30px;
+    display: inline-flex;
+    float: right;
+    margin: 20px 20px 0 0;
+    border-radius: 7px;
+    background-color:#96B64F60;
+    align-items: center;
+}
+.search-bar {
+    width: 100%;
+}
+
+.search-bar input {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 0 10px;
+}
+
+::placeholder {
+    color: rgb(52, 55, 50);
+}
+.search-bar button {
+    float: right;
+    background: transparent;
+    border: 0;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.search-bar img {
+    height: 18px;
+    width: 18px;
+    object-fit: cover;
+}
+
+/* nav style */
+.nav-menu {
+    display: inline-block;
+}
+.nav-primary ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: inline-flex;
+}
+
+.nav-primary ul li {
     font-size: 1em;
     text-transform: uppercase;
     letter-spacing: .2em;
     padding: 1.5em;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    z-index: 10;
 }
 /* body style */
 h2 {
@@ -126,7 +192,6 @@ img {
     bottom: 0;
 }
 .landing-text-2 {
-    z-index: 2;
     padding: 36px 24px;
     background-color: #32462b;
 }
@@ -265,7 +330,8 @@ img {
     margin: 0 auto;
     background-size: 100% 100%;
     background-image: url(images/Barcelona.jpeg);
-    animation: ChangeImage 40s linear infinite; 
+    animation: ChangeImage 40s linear infinite;
+    margin-bottom: 60px;
 }
 @keyframes ChangeImage {
     0% {
@@ -286,4 +352,42 @@ img {
     100% {
         background-image: url(images/Barcelona.jpeg);
     }
+}
+
+/* footer style */
+footer {
+    background-color: rgb(59, 72, 25);
+}
+.footer-inner {
+    display: grid;
+    grid-template-columns: 35% 30% 35%;
+    max-width: 1482px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+.footer-nav {
+    border-right: 1px solid #32462b;
+}
+.footer-menu, .footer-social-media {
+    list-style-type: none;
+}
+.footer-menu li{
+    padding: 1em;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.footer-social-media li{
+    float: left;
+    padding-left: 15px;
+}
+.footer-social-media img{
+    height: 40px;
+    width: 40px;
+}
+/* copyright style */
+.copy-right {
+    background-color: rgb(40, 49, 17);
+    text-align: center;
+    padding: 20px 0;
+    color: antiquewhite;
 }

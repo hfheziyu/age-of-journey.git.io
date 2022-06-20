@@ -6,6 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,600,700" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="flickity/flickity.css" media="screen">
+<script src="flickity/flickity.pkgd.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.4.2.min.js"></script>
+<script src="Javascript/expand-list.js"></script>
+<script src="Javascript/sticky-nav.js"></script>
 <style>
     @import url(Sample1.css);
 </style>
@@ -13,364 +17,396 @@
 
 <body>
 
-<header>
+<header class="site-header">
+    <div class="nav-wrap">
+        <nav class="nav-menu">
+            <div class="nav-primary">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Destinations</a></li>
+                    <li><a href="">Food</a></li>
+                    <li><a href="">Photography</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="search-bar-container">
+            <form action="/action_page.php" class="search-bar">
+                <input type="text" placeholder="Search.." name="search2">
+                <button type="submit">
+                    <img height = "18" width = "18" src="images/search.png" alt="search">
+                </button>
+            </form>
+        </div>
+    </div>
 </header>
 
-<nav>
-    <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Destinations</a></li>
-        <li><a href="">Food</a></li>
-        <li><a href="">Photography</a></li>
-    </ul>
-</nav>
+
 <div class="main-content">
-<div class="landing">
-    <div class="banner">
-        <div class="landing-1">
-            <a href="">
-                <img width="680" height="1020" src="images/Travel.jpeg" alt="">
-            </a>
-            <div class="landing-text-1">
-                <h3>
-                    <a href="">Lorem ipsum dolor sit amet.</a>
-                </h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore 
-                    magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                    exercitation ullamco laboris nisi ut aliquip ex ea 
-                    commodo consequat.
-                </p>
+    <div class="landing">
+        <div class="banner">
+            <div class="landing-1">
+                <a href="">
+                    <img width="680" height="1020" src="images/Travel.jpeg" alt="">
+                </a>
+                <div class="landing-text-1">
+                    <h3>
+                        <a href="">Lorem ipsum dolor sit amet.</a>
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore 
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                        exercitation ullamco laboris nisi ut aliquip ex ea 
+                        commodo consequat.
+                    </p>
+                </div>
+            </div>
+            <div class="landing-2">
+                <a href="">
+                    <img width="680" height="1020" src="images/Travel.jpeg" alt="">
+                </a>
+                <div class="landing-text-2-box">
+                <div class="landing-text-2">
+                    <h3>
+                        <a href="">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        </a>
+                    </h3>
+                </div>
+                </div>
             </div>
         </div>
-        <div class="landing-2">
-            <a href="">
-                <img width="680" height="1020" src="images/Travel.jpeg" alt="">
-            </a>
-            <div class="landing-text-2-box">
-            <div class="landing-text-2">
-                <h3>
+    </div>
+    <div class="recent-journeys">
+        <h2>Recent Journeys</h2>
+        <div class="recent-journeys-inner">
+            <article class="post-summary-primary">
+                <div class="post-summary-image">
                     <a href="">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        <img wid= "340" height= "510" src="images/Arlington.png" alt="">
                     </a>
-                </h3>
+                </div>
+                <div class="post-summary-content">
+                    <p class = "post-date">June 20, 2022</p>
+                    <h4 class = "post-summary-title">
+                        <a href="">Lorem Ipsum Dolor</a>
+                    </h4>
+                </div>
+            </article>
+            <article class="post-summary-primary">
+                <div class="post-summary-image">
+                    <a href="">
+                        <img wid= "340" height= "510" src="images/Barcelona.jpeg" alt="">
+                    </a>
+                </div>
+                <div class="post-summary-content">
+                    <p class = "post-date">June 20, 2022</p>
+                    <h4 class = "post-summary-title">
+                        <a href="">Lorem Ipsum Dolor</a>
+                    </h4>
+                </div>
+            </article>
+            <article class="post-summary-primary">
+                <div class="post-summary-image">
+                    <a href="">
+                        <img wid= "340" height= "510" src="images/Cairo.jpeg" alt="">
+                    </a>
+                </div>
+                <div class="post-summary-content">
+                    <p class = "post-date">June 20, 2022</p>
+                    <h4 class = "post-summary-title">
+                        <a href="">Lorem Ipsum Dolor</a>
+                    </h4>
+                </div>
+            </article>
+            <article class="post-summary-primary">
+                <div class="post-summary-image">
+                    <a href="">
+                        <img wid= "340" height= "510" src="images/Chicago.jpeg" alt="">
+                    </a>
+                </div>
+                <div class="post-summary-content">
+                    <p class = "post-date">June 20, 2022</p>
+                    <h4 class = "post-summary-title">
+                        <a href="">Lorem Ipsum Dolor</a>
+                    </h4>
+                </div>
+            </article>
+            <article class="post-summary-primary">
+                <div class="post-summary-image">
+                    <a href="">
+                        <img wid= "340" height= "510" src="images/Galapagos Islands.jpeg" alt="">
+                    </a>
+                </div>
+                <div class="post-summary-content">
+                    <p class = "post-date">June 20, 2022</p>
+                    <h4 class = "post-summary-title">
+                        <a href="">Lorem Ipsum Dolor</a>
+                    </h4>
+                </div>
+            </article>
+            <article class="post-summary-primary">
+                <div class="post-summary-image">
+                    <a href="">
+                        <img wid= "340" height= "510" src="images/Ho Chi Minh City.jpeg" alt="">
+                    </a>
+                </div>
+                <div class="post-summary-content">
+                    <p class = "post-date">June 20, 2022</p>
+                    <h4 class = "post-summary-title">
+                        <a href="">Lorem Ipsum Dolor</a>
+                    </h4>
+                </div>
+            </article>
+            <article class="post-summary-primary">
+                <div class="post-summary-image">
+                    <a href="">
+                        <img wid= "340" height= "510" src="images/Hong Kong.jpeg" alt="">
+                    </a>
+                </div>
+                <div class="post-summary-content">
+                    <p class = "post-date">June 20, 2022</p>
+                    <h4 class = "post-summary-title">
+                        <a href="">Lorem Ipsum Dolor</a>
+                    </h4>
+                </div>
+            </article>
+            <article class="post-summary-primary">
+                <div class="post-summary-image">
+                    <a href="">
+                        <img wid= "340" height= "510" src="images/Istanbul.jpeg" alt="">
+                    </a>
+                </div>
+                <div class="post-summary-content">
+                    <p class = "post-date">June 20, 2022</p>
+                    <h4 class = "post-summary-title">
+                        <a href="">Lorem Ipsum Dolor</a>
+                    </h4>
+                </div>
+            </article>
+        </div>
+    </div>
+    <div class="destination">
+        <h2>Destinations</h2>
+        <div class="destination-inner">
+            <div class="map">
+                <iframe src="https://georgetownuniv.maps.arcgis.com/apps/instant/basic/index.html?appid=2c08d2a8b0d741fc82c7c480151dba51" width="1000" height="600" frameborder="0" style="border:0" allowfullscreen>iFrames are not supported on this page.</iframe>
             </div>
+            <div class="destination-list">
+                <p class="click-to-expand">Click to Expand</p>
+                <ul>
+                    <li class="expand-list"><a class="expand-title">Asia</a>
+                        <ul>
+                            <li><a href="">China</a></li>
+                            <li><a href="">Japan</a></li>
+                            <li><a href="">South Korea</a></li>
+                            <li><a href="">Taiwan</a></li>
+                        </ul>
+                    </li>
+                    <li class="expand-list"><a class="expand-title">Europe</a>
+                        <ul>
+                            <li><a href="">UK</a></li>
+                            <li><a href="">Spain</a></li>
+                            <li><a href="">France</a></li>
+                        </ul>
+                    </li>
+                    <li class="expand-list"><a class="expand-title">North America</a>
+                        <ul>
+                            <li><a href="">USA</a></li>
+                            <li><a href="">Canada</a></li>
+                            <li><a href="">Mexico</a></li>
+                        </ul>
+                    </li>
+                    <li class="expand-list"><a class="expand-title">South America</a>
+                        <ul>
+                            <li><a href="">Ecuador</a></li>
+                            <li><a href="">Peru</a></li>
+                            <li><a href="">Chile</a></li>
+                        </ul>
+                    </li>
+                    <li class="expand-list"><a class="expand-title">Africa</a>
+                        <ul>
+                            <li><a href="">Egypt</a></li>
+                            <li><a href="">South Africa</a></li>
+                            <li><a href="">Niger</a></li>
+                        </ul>
+                    </li>
+                    <li class="expand-list"><a class="expand-title">Oceania</a>
+                        <ul>
+                            <li><a href="">Australia</a></li>
+                            <li><a href="">Nauru</a></li>
+                            <li><a href="">Fiji</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
+        </div>
+    </div>
+    <div class="daily">
+        <h2>Daily Outings</h2>
+        <div class="daily-inner">
+            <div class="post-summary-secondary">
+                <div class="post-summary-image">
+                    <a href="">
+                        <img src="images/Arlington.png" alt=""
+                        height="510" width="340">
+                    </a>
+                </div>
+                <div class="post-summary-content">
+                    <h3 class="post-summary-title">
+                        <a href="">Lorem Ipsum Dolor</a>
+                    </h3>
+                    <p class="post-date">June 20, 2022</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+            <div class="post-summary-secondary">
+                <div class="post-summary-image">
+                    <a href="">
+                        <img src="images/Cairo.jpeg" alt=""
+                        height="510" width="340">
+                    </a>
+                </div>
+                <div class="post-summary-content">
+                    <h3 class="post-summary-title">
+                        <a href="">Lorem Ipsum Dolor</a>
+                    </h3>
+                    <p class="post-date">June 20, 2022</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+            <div class="post-summary-secondary">
+                <div class="post-summary-image">
+                    <a href="">
+                        <img src="images/Chicago.jpeg" alt=""
+                        height="510" width="340">
+                    </a>
+                </div>
+                <div class="post-summary-content">
+                    <h3 class="post-summary-title">
+                        <a href="">Lorem Ipsum Dolor</a>
+                    </h3>
+                    <p class="post-date">June 20, 2022</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+            <div class="post-summary-secondary">
+                <div class="post-summary-image">
+                    <a href="">
+                        <img src="images/Lima.jpeg" alt=""
+                        height="510" width="340">
+                    </a>
+                </div>
+                <div class="post-summary-content">
+                    <h3 class="post-summary-title">
+                        <a href="">Lorem Ipsum Dolor</a>
+                    </h3>
+                    <p class="post-date">June 20, 2022</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="food">
+        <h2>Food</h2>
+        <div class="carousel"
+        data-flickity='{"wrapAround": true, "pageDots": false, "draggable": true}'>
+            <div class="carousel-cell">
+                <a href="">
+                    <img height = "600" width = "600" src="images/Cairo.jpeg" alt="">
+                </a>
+                <a href="" class="carousel-text">
+                    Cairo
+                </a>
+            </div>
+            <div class="carousel-cell">
+                <a href="">
+                    <img height = "600" width = "600" src="images/Ho Chi Minh City.jpeg" alt="">
+                </a>
+                <a href="" class="carousel-text">
+                    Ho Chi Minh City
+                </a>
+            </div>
+            <div class="carousel-cell">
+                <a href="">
+                    <img height = "600" width = "600" src="images/Istanbul.jpeg" alt="">
+                </a>
+                <a href="" class="carousel-text">
+                    Istanbul
+                </a>
+            </div>
+            <div class="carousel-cell">
+                <a href="">
+                    <img height = "600" width = "600" src="images/Jakarta.jpeg" alt="">
+                </a>
+                <a href="" class="carousel-text">
+                    Jakarta
+                </a>
+            </div>
+            <div class="carousel-cell">
+                <a href="">
+                    <img height = "600" width = "600" src="images/Machu Picchu.jpeg" alt="">
+                </a>
+                <a href="" class="carousel-text">
+                    Machu Picchu
+                </a>
+            </div>
+            <div class="carousel-cell">
+                <a href="">
+                    <img height = "600" width = "600" src="images/Montreal.jpeg" alt="">
+                </a>
+                <a href="" class="carousel-text">
+                    Montreal
+                </a>
+            </div>
+            <div class="carousel=cell">
+                <a href="">
+                    <img height = "600" width = "600" src="images/Petra.jpeg" alt="">
+                </a>
+                <a href="" class="carousel-text">
+                    Petra
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="photography">
+        <h2>Photography</h2>
+        <div class="imgSlider">
         </div>
     </div>
 </div>
 
-<div class="recent-journeys">
-    <h2>Recent Journeys</h2>
-    <div class="recent-journeys-inner">
-        <article class="post-summary-primary">
-            <div class="post-summary-image">
-                <a href="">
-                    <img wid= "340" height= "510" src="images/Arlington.png" alt="">
-                </a>
-            </div>
-            <div class="post-summary-content">
-                <p class = "post-date">June 20, 2022</p>
-                <h4 class = "post-summary-title">
-                    <a href="">Lorem Ipsum Dolor</a>
-                </h4>
-            </div>
-        </article>
-        <article class="post-summary-primary">
-            <div class="post-summary-image">
-                <a href="">
-                    <img wid= "340" height= "510" src="images/Barcelona.jpeg" alt="">
-                </a>
-            </div>
-            <div class="post-summary-content">
-                <p class = "post-date">June 20, 2022</p>
-                <h4 class = "post-summary-title">
-                    <a href="">Lorem Ipsum Dolor</a>
-                </h4>
-            </div>
-        </article>
-        <article class="post-summary-primary">
-            <div class="post-summary-image">
-                <a href="">
-                    <img wid= "340" height= "510" src="images/Cairo.jpeg" alt="">
-                </a>
-            </div>
-            <div class="post-summary-content">
-                <p class = "post-date">June 20, 2022</p>
-                <h4 class = "post-summary-title">
-                    <a href="">Lorem Ipsum Dolor</a>
-                </h4>
-            </div>
-        </article>
-        <article class="post-summary-primary">
-            <div class="post-summary-image">
-                <a href="">
-                    <img wid= "340" height= "510" src="images/Chicago.jpeg" alt="">
-                </a>
-            </div>
-            <div class="post-summary-content">
-                <p class = "post-date">June 20, 2022</p>
-                <h4 class = "post-summary-title">
-                    <a href="">Lorem Ipsum Dolor</a>
-                </h4>
-            </div>
-        </article>
-        <article class="post-summary-primary">
-            <div class="post-summary-image">
-                <a href="">
-                    <img wid= "340" height= "510" src="images/Galapagos Islands.jpeg" alt="">
-                </a>
-            </div>
-            <div class="post-summary-content">
-                <p class = "post-date">June 20, 2022</p>
-                <h4 class = "post-summary-title">
-                    <a href="">Lorem Ipsum Dolor</a>
-                </h4>
-            </div>
-        </article>
-        <article class="post-summary-primary">
-            <div class="post-summary-image">
-                <a href="">
-                    <img wid= "340" height= "510" src="images/Ho Chi Minh City.jpeg" alt="">
-                </a>
-            </div>
-            <div class="post-summary-content">
-                <p class = "post-date">June 20, 2022</p>
-                <h4 class = "post-summary-title">
-                    <a href="">Lorem Ipsum Dolor</a>
-                </h4>
-            </div>
-        </article>
-        <article class="post-summary-primary">
-            <div class="post-summary-image">
-                <a href="">
-                    <img wid= "340" height= "510" src="images/Hong Kong.jpeg" alt="">
-                </a>
-            </div>
-            <div class="post-summary-content">
-                <p class = "post-date">June 20, 2022</p>
-                <h4 class = "post-summary-title">
-                    <a href="">Lorem Ipsum Dolor</a>
-                </h4>
-            </div>
-        </article>
-        <article class="post-summary-primary">
-            <div class="post-summary-image">
-                <a href="">
-                    <img wid= "340" height= "510" src="images/Istanbul.jpeg" alt="">
-                </a>
-            </div>
-            <div class="post-summary-content">
-                <p class = "post-date">June 20, 2022</p>
-                <h4 class = "post-summary-title">
-                    <a href="">Lorem Ipsum Dolor</a>
-                </h4>
-            </div>
-        </article>
-    </div>
-</div>
-
-<div class="destination">
-    <h2>Destinations</h2>
-    <div class="destination-inner">
-        <div class="map">
-            <iframe src="https://georgetownuniv.maps.arcgis.com/apps/instant/basic/index.html?appid=2c08d2a8b0d741fc82c7c480151dba51" width="1000" height="600" frameborder="0" style="border:0" allowfullscreen>iFrames are not supported on this page.</iframe>
-        </div>
-        <div class="destination-list">
-            <p class="click-to-expand">Click to Expand</p>
-            <ul>
-                <li class="expand-list"><a class="expand-title">Asia</a>
-                    <ul>
-                        <li><a href="">China</a></li>
-                        <li><a href="">Japan</a></li>
-                        <li><a href="">South Korea</a></li>
-                        <li><a href="">Taiwan</a></li>
-                    </ul>
-                </li>
-                <li class="expand-list"><a class="expand-title">Europe</a>
-                    <ul>
-                        <li><a href="">UK</a></li>
-                        <li><a href="">Spain</a></li>
-                        <li><a href="">France</a></li>
-                    </ul>
-                </li>
-                <li class="expand-list"><a class="expand-title">North America</a>
-                    <ul>
-                        <li><a href="">USA</a></li>
-                        <li><a href="">Canada</a></li>
-                        <li><a href="">Mexico</a></li>
-                    </ul>
-                </li>
-                <li class="expand-list"><a class="expand-title">South America</a>
-                    <ul>
-                        <li><a href="">Ecuador</a></li>
-                        <li><a href="">Peru</a></li>
-                        <li><a href="">Chile</a></li>
-                    </ul>
-                </li>
-                <li class="expand-list"><a class="expand-title">Africa</a>
-                    <ul>
-                        <li><a href="">Egypt</a></li>
-                        <li><a href="">South Africa</a></li>
-                        <li><a href="">Niger</a></li>
-                    </ul>
-                </li>
-                <li class="expand-list"><a class="expand-title">Oceania</a>
-                    <ul>
-                        <li><a href="">Australia</a></li>
-                        <li><a href="">Nauru</a></li>
-                        <li><a href="">Fiji</a></li>
-                    </ul>
-                </li>
+<footer>
+    <div class="footer-inner">
+        <div class="footer-nav">
+            <ul class="footer-menu">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Destinations</a></li>
+                <li><a href="">Daily Outings</a></li> 
+                <li><a href="">Food</a></li>
+                <li><a href="">Photography</a></li>
+            </ul>
+            <ul class="footer-social-media">
+                <li><a href=""><img src="images/f_logo_RGB-White_1024.png" alt=""></a></li>
+                <li><a href=""><img src="images/Instagram_Glyph_White.png" alt=""></a></li>
             </ul>
         </div>
-    </div>
-</div>
+        <div class="footer-logo">
 
-<div class="daily">
-    <h2>Daily Outings</h2>
-    <div class="daily-inner">
-        <div class="post-summary-secondary">
-            <div class="post-summary-image">
-                <a href="">
-                    <img src="images/Arlington.png" alt=""
-                    height="510" width="340">
-                </a>
-            </div>
-            <div class="post-summary-content">
-                <h3 class="post-summary-title">
-                    <a href="">Lorem Ipsum Dolor</a>
-                </h3>
-                <p class="post-date">June 20, 2022</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
         </div>
-        <div class="post-summary-secondary">
-            <div class="post-summary-image">
-                <a href="">
-                    <img src="images/Cairo.jpeg" alt=""
-                    height="510" width="340">
-                </a>
-            </div>
-            <div class="post-summary-content">
-                <h3 class="post-summary-title">
-                    <a href="">Lorem Ipsum Dolor</a>
-                </h3>
-                <p class="post-date">June 20, 2022</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-        </div>
-        <div class="post-summary-secondary">
-            <div class="post-summary-image">
-                <a href="">
-                    <img src="images/Chicago.jpeg" alt=""
-                    height="510" width="340">
-                </a>
-            </div>
-            <div class="post-summary-content">
-                <h3 class="post-summary-title">
-                    <a href="">Lorem Ipsum Dolor</a>
-                </h3>
-                <p class="post-date">June 20, 2022</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-        </div>
-        <div class="post-summary-secondary">
-            <div class="post-summary-image">
-                <a href="">
-                    <img src="images/Lima.jpeg" alt=""
-                    height="510" width="340">
-                </a>
-            </div>
-            <div class="post-summary-content">
-                <h3 class="post-summary-title">
-                    <a href="">Lorem Ipsum Dolor</a>
-                </h3>
-                <p class="post-date">June 20, 2022</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-        </div>
-    </div>
-</div>
+        <div class="footer-connect">
 
-<div class="food">
-    <h2>Food</h2>
-    <div class="carousel"
-    data-flickity='{"wrapAround": true, "pageDots": false, "draggable": true}'>
-        <div class="carousel-cell">
-            <a href="">
-                <img height = "600" width = "600" src="images/Cairo.jpeg" alt="">
-            </a>
-            <a href="" class="carousel-text">
-                Cairo
-            </a>
-        </div>
-        <div class="carousel-cell">
-            <a href="">
-                <img height = "600" width = "600" src="images/Ho Chi Minh City.jpeg" alt="">
-            </a>
-            <a href="" class="carousel-text">
-                Ho Chi Minh City
-            </a>
-        </div>
-        <div class="carousel-cell">
-            <a href="">
-                <img height = "600" width = "600" src="images/Istanbul.jpeg" alt="">
-            </a>
-            <a href="" class="carousel-text">
-                Istanbul
-            </a>
-        </div>
-        <div class="carousel-cell">
-            <a href="">
-                <img height = "600" width = "600" src="images/Jakarta.jpeg" alt="">
-            </a>
-            <a href="" class="carousel-text">
-                Jakarta
-            </a>
-        </div>
-        <div class="carousel-cell">
-            <a href="">
-                <img height = "600" width = "600" src="images/Machu Picchu.jpeg" alt="">
-            </a>
-            <a href="" class="carousel-text">
-                Machu Picchu
-            </a>
-        </div>
-        <div class="carousel-cell">
-            <a href="">
-                <img height = "600" width = "600" src="images/Montreal.jpeg" alt="">
-            </a>
-            <a href="" class="carousel-text">
-                Montreal
-            </a>
-        </div>
-        <div class="carousel=cell">
-            <a href="">
-                <img height = "600" width = "600" src="images/Petra.jpeg" alt="">
-            </a>
-            <a href="" class="carousel-text">
-                Petra
-            </a>
         </div>
     </div>
+</footer>
+<div class="copy-right">
+    <p>Copyright © 2022 Age of Journey | All Rights Reserved</p> 
 </div>
-
-<div class="photography">
-    <h2>Photography</h2>
-    <div class="imgSlider">
-    </div>
-</div>
-</div>
-    <script src="flickity/flickity.pkgd.min.js" type="text/javascript"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.4.2.min.js"></script>
-    <script src="Javascript/expand-list.js" type="text/javascript"></script>
 </body>
-
 </html>
