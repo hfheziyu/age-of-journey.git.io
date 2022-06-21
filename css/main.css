@@ -285,28 +285,28 @@ img {
     place-items: center;
     margin: 0 auto;
     background-size: 100% 100%;
-    background-image: url(/<age-of-journey.git.io>/images/Barcelona.jpeg);
+    background-image: url(./images/Barcelona.jpeg);
     animation: ChangeImage 40s linear infinite;
     margin-bottom: 60px; 
 }
 @keyframes ChangeImage {
     0% {
-        background-image: url(/<age-of-journey.git.io>/images/Barcelona.jpeg);
+        background-image: url(./images/Barcelona.jpeg);
     }
     20% {
-        background-image: url(/<age-of-journey.git.io>/images/Cairo.jpeg);
+        background-image: url(./images/Cairo.jpeg);
     }
     40% {
-        background-image: url(/<age-of-journey.git.io>/images/Chicago.jpeg);
+        background-image: url(./images/Chicago.jpeg);
     }
     60% {
-        background-image: url(/<age-of-journey.git.io>/images/Tokyo.jpeg);
+        background-image: url(./images/Tokyo.jpeg);
     }
     80% {
-        background-image: url(/<age-of-journey.git.io>/images/Hong\ Kong.jpeg);
+        background-image: url(./images/Hong\ Kong.jpeg);
     }
     100% {
-        background-image: url(/<age-of-journey.git.io>/images/Barcelona.jpeg);
+        background-image: url(./images/Barcelona.jpeg);
     }
 }
 /* footer style */
