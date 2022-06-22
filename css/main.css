@@ -1,5 +1,31 @@
 @charset "UTF-8";
 
+body{
+    font-family: "Montserrat";
+    font-size: 100%;
+    margin: 0;
+}
+h2 {
+    font-size: 30px;
+}
+h3 {
+    font-size: 28px;
+}
+h4 {
+    font-size: 20px;
+    font-weight: 400;
+}
+.hidden {
+    display:none;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.post-summary-title {
+    margin: 0;
+}
+
 /* links style */
 a.learn-more {
     font-size: 1em;
