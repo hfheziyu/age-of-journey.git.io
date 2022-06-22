@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+.map {
+    display: flex;
+    justify-content: center;
+}
+
+.browse-country {
+    max-width: 1110px;
+    margin: auto;
+}
+.country-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #e2f3c8;
+    margin: 0;
+}
+.country {
+    width: 289px;
+    min-height: 220px;
+    border-right: #1e3715 1px solid;
+    border-bottom: #1e3715 1px solid;
+    padding: 40px 40px 50px 40px;
+}
+
+.country:nth-child(3), .country:nth-child(6) {
+    border-right: none;
+}
+
+.country:nth-child(4), .country:nth-child(5), .country:nth-child(6) {
+    border-bottom: none;
+}
+
+.country h3 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.country ul li {
+    list-style: none;
+    text-transform: uppercase;
+    padding: 0.5em 0;
+}

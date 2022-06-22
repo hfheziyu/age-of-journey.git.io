@@ -4,13 +4,15 @@
 <meta charset="UTF-8">
 <title>Age of Journey</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link hhref="https://fonts.googleapis.com/css?family=Montserrat:100,200,300, 400,600,700" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,600,700" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="css/flickity.css" media="screen">
 <script src="js/flickity.pkgd.min.js"></script>
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.4.2.min.js"></script>
 <script src="js/expand-list.js"></script>
 <script src="js/sticky-nav.js"></script>
+<script src="js/search-bar.js"></script>
 <style>
+    @import url(css/general.css);
     @import url(css/main.css);
 </style>
 </head>
@@ -19,16 +21,36 @@
 
 <header>
     <div class="nav-inner">
-        <nav class="nav-menu">
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Destinations</a></li>
-                <li><a href="">Food</a></li>
-                <li><a href="">Photography</a></li>
-            </ul>
-        </nav>
+        <div class="nav-container">
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="dailies.html">Dailies</a></li>
+                    <li><a href="food.html">Food</a></li>
+                    <li><a href="photography.html">Photography</a></li>
+                </ul>
+            </nav>
+        <div class="search">
+            <img src="images/search.png" alt="search" 
+            style="height:30px;width:30px;">
+        </div>
+        <div class="search-close hidden">
+            <img src="images/close.svg" alt="close"
+            style="height:30px; width:30px;">
+        </div>
     </div>
+        <div class="search-bar hidden">
+            <div class="search-bar-inner">
+                <div class="search-text">
+                    <p>Search</p>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="Search Stories">
+                </div>
+            </div>
+        </div>
 </header>
 
 <div class="main-content">
@@ -177,7 +199,7 @@
         </div>
     </div>
     <div class="destination">
-        <h2>Destinations</h2>
+        <h2><a href="destinations.html">Destinations</a></h2>
         <div class="destination-inner">
             <div class="map">
                 <iframe src="https://georgetownuniv.maps.arcgis.com/apps/instant/basic/index.html?appid=2c08d2a8b0d741fc82c7c480151dba51" width="1000" height="600" frameborder="0" style="border:0" allowfullscreen>iFrames are not supported on this page.</iframe>
@@ -233,7 +255,7 @@
         </div>
     </div>
     <div class="daily">
-        <h2>Daily Outings</h2>
+        <h2><a href="dailies.html">Dailies</a></h2>
         <div class="daily-inner">
             <div class="post-summary-secondary">
                 <div class="post-summary-image">
@@ -302,7 +324,7 @@
         </div>
     </div>
     <div class="food">
-        <h2>Food</h2>
+        <h2><a href="food.html">Food</a></h2>
         <div class="carousel"
         data-flickity='{"wrapAround": true, "pageDots": false, "draggable": true}'>
             <div class="carousel-cell">
@@ -364,7 +386,7 @@
         </div>
     </div>
     <div class="photography">
-        <h2>Photography</h2>
+        <h2><a href="photography.html">Photography</a></h2>
         <div class="imgSlider">
         </div>
     </div>
@@ -374,12 +396,12 @@
     <div class="footer-inner">
         <div class="footer-nav">
             <ul class="footer-menu">
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Destinations</a></li>
-                <li><a href="">Daily Outings</a></li>
-                <li><a href="">Food</a></li>
-                <li><a href="">Photography</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="dailies.html">Dailies</a></li>
+                <li><a href="food.html">Food</a></li>
+                <li><a href="photography.html">Photography</a></li>
             </ul>
             <ul class="footer-social-media">
                 <li><a href=""><img src="images/f_logo_RGB-White_512.png" alt="Facebook"></a></li>

@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+.dailies-post-inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 32px;
+    max-width: 1450px;
+    margin: 0 auto;
+}
